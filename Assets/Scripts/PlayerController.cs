@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         if (life == 0)
         {
             PlayerPrefs.SetInt("CurrScore", score);
-            Application.LoadLevel((int)SceneManager.Scenes.GameOver);
+            UnityEngine.SceneManagement.SceneManager.LoadScene((int)SceneManager.Scenes.GameOver);
         }
     }
 }

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     {
         sceneManager = SceneManager.GetInstance();
 
-        switch (Application.loadedLevel)
+        switch (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex)
         {
             case (int)SceneManager.Scenes.Menu: sceneManager.CurrScene = new Menu(); break;
             case (int)SceneManager.Scenes.Game: sceneManager.CurrScene = new Level(); break;

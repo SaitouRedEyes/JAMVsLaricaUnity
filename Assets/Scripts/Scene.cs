@@ -41,10 +41,10 @@ public abstract class Scene
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            switch (Application.loadedLevel)
+            switch (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex)
             {
-                case (int)SceneManager.Scenes.Menu: Application.LoadLevel((int)SceneManager.Scenes.Game); break;
-                case (int)SceneManager.Scenes.GameOver: Application.LoadLevel((int)SceneManager.Scenes.Menu); break;
+                case (int)SceneManager.Scenes.Menu: UnityEngine.SceneManagement.SceneManager.LoadScene((int)SceneManager.Scenes.Game); break;
+                case (int)SceneManager.Scenes.GameOver: UnityEngine.SceneManagement.SceneManager.LoadScene((int)SceneManager.Scenes.Menu); break;
             }
         }
     }
